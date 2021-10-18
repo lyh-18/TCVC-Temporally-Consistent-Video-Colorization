@@ -26,11 +26,11 @@ The proposed TCVC framework (take N=4 for example). The anchor frame branch colo
 ## Citation
 If you find our work is useful, please kindly cite it.
   
-'''BibTex
+```BibTex
 @article{liu2021temporally,
   title={Temporally Consistent Video Colorization with Deep Feature Propagation and Self-regularization Learning},
   author={Liu, Yihao and Zhao, Hengyuan and Chan, Kelvin CK and Wang, Xintao and Loy, Chen Change and Qiao, Yu and Dong, Chao},
   journal={arXiv preprint arXiv:2110.04562},
   year={2021}
 }
-'''
+```
