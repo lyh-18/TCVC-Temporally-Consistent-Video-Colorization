@@ -15,8 +15,9 @@ Image-based colorization method, e.g. InsColor(CVPR2021), tends to bring about s
 ![visual_comparison3](compare3.png)  
 Image-based methods, like InsColor(CVPR2021), IDC(TOG2017), CIC(ECCV2016), are prone to produce severe flickering artifacts. Post-processing method BTC(ECCV2018) cannot achieve long-term temporal consistency well and cannot handle outliers. The results of FAVC(CVPR2019) are usually unsaturated and unsatisfactory.
   
+### [Video demo](https://www.youtube.com/watch?v=c7dczMs-olE&t=22s)
 ![visual_comparison_video](compare_video.png)  
-Video demo and comparison can be found at this link: [[demo]](https://www.youtube.com/watch?v=c7dczMs-olE&t=22s)
+We also provide a video demo, which can help vividly compare different methods. 
 
 ## Method
 ![framework](framework.png)  
