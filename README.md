@@ -21,3 +21,15 @@ Video demo and comparison can be found at this link: [[demo]](https://www.youtub
 ## Method
 ![framework](framework.png)  
 The proposed TCVC framework (take N=4 for example). The anchor frame branch colorizes the two anchor frames and extracts the deep features for propagation. With bidirectional deep feature propagation, the internal frame features are all generated from anchor frames, which ensures the temporal consistency in high-dimensional feature space.
+
+
+## Citation
+If you find our work is useful, please kindly cite it.
+'''BibTex
+@article{liu2021temporally,
+  title={Temporally Consistent Video Colorization with Deep Feature Propagation and Self-regularization Learning},
+  author={Liu, Yihao and Zhao, Hengyuan and Chan, Kelvin CK and Wang, Xintao and Loy, Chen Change and Qiao, Yu and Dong, Chao},
+  journal={arXiv preprint arXiv:2110.04562},
+  year={2021}
+}
+'''
