@@ -21,6 +21,7 @@ Image-based methods, like InsColor(CVPR2020), IDC(TOG2017), CIC(ECCV2016), are p
 ### [Video demo](https://www.youtube.com/watch?v=c7dczMs-olE&t=22s)
 ![visual_comparison_video](compare_video.png)  
 We also provide a video demo, which can help vividly compare different methods. 
+[![TCVC demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1634567120/video_to_markdown/images/youtube--c7dczMs-olE-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=c7dczMs-olE&t=22s "TCVC demo")
 
 ## Method
 ![framework](framework.png)  
