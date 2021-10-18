@@ -12,11 +12,11 @@ Video colorization is a challenging and highly ill-posed problem. Although recen
 ### Colorization results on legacy black-and-white movies 
 ![visual_comparison1](compare1.png)  
 ![visual_comparison2](compare2.png)  
-Image-based colorization method, e.g. InsColor(CVPR2021), tends to bring about severe flickering artifacts with inconsistent colors (highlighted in green rectangles). The colorization effect of video-based method FAVC(CVPR2019) is not satisfactory. Instead, our method can achieve good temporal consistency while maintaining excellent colorization performance.
+Image-based colorization method, e.g. InsColor(CVPR2020), tends to bring about severe flickering artifacts with inconsistent colors (highlighted in green rectangles). The colorization effect of video-based method FAVC(CVPR2019) is not satisfactory. Instead, our method can achieve good temporal consistency while maintaining excellent colorization performance.
 
 ### Comparison with image-based, video-based and post-processing methods
 ![visual_comparison3](compare3.png)  
-Image-based methods, like InsColor(CVPR2021), IDC(TOG2017), CIC(ECCV2016), are prone to produce severe flickering artifacts. Post-processing method BTC(ECCV2018) cannot achieve long-term temporal consistency well and cannot handle outliers. The results of FAVC(CVPR2019) are usually unsaturated and unsatisfactory.
+Image-based methods, like InsColor(CVPR2020), IDC(TOG2017), CIC(ECCV2016), are prone to produce severe flickering artifacts. Post-processing method BTC(ECCV2018) cannot achieve long-term temporal consistency well and cannot handle outliers. The results of FAVC(CVPR2019) are usually unsaturated and unsatisfactory.
   
 ### [Video demo](https://www.youtube.com/watch?v=c7dczMs-olE&t=22s)
 ![visual_comparison_video](compare_video.png)  
