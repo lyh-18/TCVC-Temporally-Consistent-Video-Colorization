@@ -57,38 +57,38 @@ python setup.py develop
 ### Dataset
 #### Training dataset
 We mix the training sets of DAVIS and Videvo datasets together for training.
-[Baidu Disk]() (token: )
+[[Baidu Disk]]() (token: )
 
 #### Test dataset
 We use the test sets of DAVIS and Videvo datasets for quantitative evaluation.
-[Baidu Disk]() (token: )
+[[Baidu Disk]]() (token: )
 
 #### Custom test dataset
 You can test your own dataset as well. More details are described in the Quick Test section.
 
 ### Pretrained Models
-1. Download the pretrained FlowNet2 model at [Baidu Disk]() (token: ). Put the downloaded model in the `experiments/pretrained_models/` folder.
-2. Download the pretrained TCVC model at [Baidu Disk]() (token: ). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)
+1. Download the pretrained FlowNet2 model at [[Baidu Disk]]() (token: ). Put the downloaded model in the `experiments/pretrained_models/` folder.  
+2. Download the pretrained TCVC model at [[Baidu Disk]]() (token: ). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)  
 
 ## Quick Test
-Enter the `code` directory.
-1. If ground-truth colorful video is available:
-`python test_TCVC_onesampling.py`
-`python test_TCVC_multisampling.py` (adopt multiple sampling ensemble strategy)
-Note: the code will first convert the ground-truth colorful video into gray video, then the network will output the predicted colorized video, after which the PSNR will be calculated. This mode is mainly used to quantitatively evaluate the difference between the predicted results and the original color version.
-2. If there is no ground-truth colorful video:
-`python test_TCVC_onesampling_noGT.py`
+Enter the `code` directory.  
+1. If ground-truth colorful video is available:  
+`python test_TCVC_onesampling.py`  
+`python test_TCVC_multisampling.py` (adopt multiple sampling ensemble strategy)  
+Note: the code will first convert the ground-truth colorful video into gray video, then the network will output the predicted colorized video, after which the PSNR will be calculated. This mode is mainly used to quantitatively evaluate the difference between the predicted results and the original color version.  
+2. If there is no ground-truth colorful video:  
+`python test_TCVC_onesampling_noGT.py`  
 
 Test settings like `GPU`, `input folder`, `model path`, `interval length`, etc, can be specified in the above test scripts.
 
 ## Training
-Specify the training configurations in `codes/options/train/train_TCVC_IDC.yml`.
-Running the following command.
+Specify the training configurations in `codes/options/train/train_TCVC_IDC.yml`.  
+Running the following command:  
 `python train_TCVC.py -opt options/train/train_TCVC_IDC.yml`
 
 ## Miscellaneous
-1. We also provide a script `eval_results.py` to help evaluate the results.
-2. To facilitate comparison, we also provide the output results of several methods and our method. Download link: [Baidu Disk]() (token: )
+1. We also provide a script `eval_results.py` to help evaluate the results.  
+2. To facilitate comparison, we also provide the output results of several methods and our method. Download link: [Baidu Disk]() (token: )  
 
 ## Citation
 If you find our work is useful, please kindly cite it.
