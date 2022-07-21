@@ -72,7 +72,7 @@ You can test your own dataset as well. More details are described in the Quick T
 
 ## Quick Test
 Enter the `code` directory.  
-1. If ground-truth colorful video is available:  
+[1] If ground-truth colorful video is available:  
 a. one sampling  
 ```
 python test_TCVC_onesampling.py
@@ -82,7 +82,8 @@ b. multiple sampling ensemble strategy
 python test_TCVC_multisampling.py
 ```  
 Note: the code will first convert the ground-truth colorful video into gray video, then the network will output the predicted colorized video, after which the PSNR will be calculated. This mode is mainly used to quantitatively evaluate the difference between the predicted results and the original color version.  
-3. If there is no ground-truth colorful video:  
+
+[2] If there is no ground-truth colorful video:  
 ```
 python test_TCVC_onesampling_noGT.py  
 ```
