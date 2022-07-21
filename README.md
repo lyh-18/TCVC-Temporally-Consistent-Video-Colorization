@@ -73,22 +73,32 @@ You can test your own dataset as well. More details are described in the Quick T
 ## Quick Test
 Enter the `code` directory.  
 1. If ground-truth colorful video is available:  
-`python test_TCVC_onesampling.py`  
-`python test_TCVC_multisampling.py` (adopt multiple sampling ensemble strategy)  
+a. one sampling  
+```
+python test_TCVC_onesampling.py
+```
+b. multiple sampling ensemble strategy  
+```
+python test_TCVC_multisampling.py
+```  
 Note: the code will first convert the ground-truth colorful video into gray video, then the network will output the predicted colorized video, after which the PSNR will be calculated. This mode is mainly used to quantitatively evaluate the difference between the predicted results and the original color version.  
-2. If there is no ground-truth colorful video:  
-`python test_TCVC_onesampling_noGT.py`  
+3. If there is no ground-truth colorful video:  
+```
+python test_TCVC_onesampling_noGT.py  
+```
 
 Test settings like `GPU`, `input folder`, `model path`, `interval length`, etc, can be specified in the above test scripts.
 
 ## Training
 Specify the training configurations in `codes/options/train/train_TCVC_IDC.yml`.  
 Running the following command:  
-`python train_TCVC.py -opt options/train/train_TCVC_IDC.yml`
+```
+python train_TCVC.py -opt options/train/train_TCVC_IDC.yml
+```
 
 ## Miscellaneous
 1. We also provide a script `eval_results.py` to help evaluate the results.  
-2. To facilitate comparison, we also provide the output results of several methods and our method. Download link: [Baidu Disk]() (token: )  
+2. To facilitate comparison, we also provide the output results of several methods and our method. Download link: [[Baidu Disk]]() (token: )  
 
 ## Citation
 If you find our work is useful, please kindly cite it.
