@@ -57,18 +57,18 @@ python setup.py develop
 ### Dataset
 #### Training dataset
 We mix the training sets of DAVIS and Videvo datasets together for training.
-[[Baidu Disk]]() (token: )
+[[Baidu Disk]]() (token: ) # to be updated
 
 #### Test dataset
 We use the test sets of DAVIS and Videvo datasets for quantitative evaluation.
-[[Baidu Disk]]() (token: )
+[[Baidu Disk]]() (token: ) # to be updated
 
 #### Custom test dataset
 You can test your own dataset as well. More details are described in the Quick Test section.
 
 ### Pretrained Models
-1. Download the pretrained FlowNet2 model at [[Baidu Disk]]() (token: ). Put the downloaded model in the `experiments/pretrained_models/` folder.  
-2. Download the pretrained TCVC model at [[Baidu Disk]]() (token: ). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)  
+1. Download the pretrained FlowNet2 model at [[Baidu Disk]](https://pan.baidu.com/s/188C2UPRvMXnuhxCaocBo0A) (token: 7sxc). Put the downloaded model in the `experiments/pretrained_models/` folder.  
+2. Download the pretrained TCVC model at [[Baidu Disk]](https://pan.baidu.com/s/1eSCUCfXjsDeLC5-qGytuiA) (token: z8f4). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)  
 
 ## Quick Test
 Enter the `code` directory.  
