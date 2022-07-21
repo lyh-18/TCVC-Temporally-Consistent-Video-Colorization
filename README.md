@@ -5,6 +5,10 @@
 Authors: [Yihao Liu*](https://scholar.google.com/citations?user=WRIYcNwAAAAJ&hl=en&oi=ao), [Hengyuan Zhao*](https://scholar.google.com/citations?user=QLSk-6IAAAAJ&hl=en&oi=ao), [Kelvin C.K. Chan](https://scholar.google.com/citations?user=QYTu_KQAAAAJ&hl=en&oi=ao), [Xintao Wang](https://scholar.google.com/citations?user=FQgZpQoAAAAJ&hl=en), [Chen Change Loy](https://scholar.google.com/citations?user=559LF80AAAAJ&hl=en), [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=en), [Chao Dong](https://scholar.google.com/citations?user=OSDCB0UAAAAJ&hl=en)  
 *equal contribution
 
+## News
+- [2022/7/21] :zap: We have released the test and training codes! Please refer to the instructions.
+
+
 ## Brief Introduction
 Video colorization is a challenging and highly ill-posed problem. Although recent years have witnessed remarkable progress in single image colorization, there is relatively less research effort on video colorization and existing methods always suffer from severe flickering artifacts (temporal inconsistency) or unsatisfying colorization performance. We address this problem from a new perspective, by jointly considering colorization and temporal consistency in a unified framework. Specifically, we propose a novel temporally consistent video colorization framework (TCVC). TCVC effectively propagates frame-level deep features in a bidirectional way to enhance the temporal consistency of colorization. Furthermore, TCVC introduces a self-regularization learning (SRL) scheme to minimize the prediction difference obtained with different time steps. SRL does not require any ground-truth color videos for training and can further improve temporal consistency. Experiments demonstrate that our method can not only obtain visually pleasing colorized video, but also achieve clearly better temporal consistency than state-of-the-art methods.
 
@@ -27,6 +31,64 @@ We also provide a video demo, which can help vividly compare different methods.
 ![framework](framework.png)  
 The proposed TCVC framework (take N=4 for example). The anchor frame branch colorizes the two anchor frames and extracts the deep features for propagation. With bidirectional deep feature propagation, the internal frame features are all generated from anchor frames, which ensures the temporal consistency in high-dimensional feature space.
 
+## Preparation
+### Dependencies
+- Python >= 3.6
+- Tested on PyTorch==1.2.0 (may work for other versions)
+- Tested on Ubuntu 18.04.1 LTS
+- NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-downloads) (Tested on cuda10.0)
+
+### Compile and install some customized packages
+In our implementation, we use [FlowNet2](https://github.com/NVIDIA/flownet2-pytorch) as a pretrained flow estimation module.  
+Please follow the instructions to install the required packages:
+```
+cd codes/models/archs/networks/channelnorm_package/
+python setup.py develop
+```
+```
+cd codes/models/archs/networks/correlation_package/
+python setup.py develop
+```
+```
+cd codes/models/archs/networks/resample2d_package/
+python setup.py develop
+```
+
+### Dataset
+#### Training dataset
+We mix the training sets of DAVIS and Videvo datasets together for training.
+[Baidu Disk]() (token: )
+
+#### Test dataset
+We use the test sets of DAVIS and Videvo datasets for quantitative evaluation.
+[Baidu Disk]() (token: )
+
+#### Custom test dataset
+You can test your own dataset as well. More details are described in the Quick Test section.
+
+### Pretrained Models
+1. Download the pretrained FlowNet2 model at [Baidu Disk]() (token: ). Put the downloaded model in the `experiments/pretrained_models/` folder.
+2. Download the pretrained TCVC model at [Baidu Disk]() (token: ). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)
+
+## Quick Test
+Enter the `code` directory.
+1. If ground-truth colorful video is available:
+`python test_TCVC_onesampling.py`
+`python test_TCVC_multisampling.py` (adopt multiple sampling ensemble strategy)
+Note: the code will first convert the ground-truth colorful video into gray video, then the network will output the predicted colorized video, after which the PSNR will be calculated. This mode is mainly used to quantitatively evaluate the difference between the predicted results and the original color version.
+2. If there is no ground-truth colorful video:
+`python test_TCVC_onesampling_noGT.py`
+
+Test settings like `GPU`, `input folder`, `model path`, `interval length`, etc, can be specified in the above test scripts.
+
+## Training
+Specify the training configurations in `codes/options/train/train_TCVC_IDC.yml`.
+Running the following command.
+`python train_TCVC.py -opt options/train/train_TCVC_IDC.yml`
+
+## Miscellaneous
+1. We also provide a script `eval_results.py` to help evaluate the results.
+2. To facilitate comparison, we also provide the output results of several methods and our method. Download link: [Baidu Disk]() (token: )
 
 ## Citation
 If you find our work is useful, please kindly cite it.

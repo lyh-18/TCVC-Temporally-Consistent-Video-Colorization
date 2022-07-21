@@ -1,0 +1,87 @@
+#### general settings
+name: Test_TCVC_release
+# G01_BRIB_Sig17_fixColor_Videvo_v9_trainIn10_testIn11_warploss2_noCR
+# G02_BRIB_Sig17_fixColor_DAVIS_Videvo_v9_trainIn10_testIn11_warploss2_noCR
+# name: debug
+use_tb_logger: true
+model: video_colorization_warp2 #video_colorization_warp2 | video_colorization_warp
+distortion: colorization
+save_img: True
+gpu_ids: [0,1,2,3] # [0,1,2,3] | [4,5,7,8]
+
+#### datasets
+datasets:
+  train:
+    name: DAVIS_videvo_300 # GOT10k | videvo | DAVIS_videvo | videvo_300 | DAVIS_videvo_300
+    mode: video_train
+    interval_list: [1]
+    random_reverse: false
+    
+    # videvo_300
+    #dataroot_GT: /data1/yhliu/DATA/videvo_resized/
+    #cache_keys: ./lists/videvo_train_keys.pkl
+    
+    # DAVIS_videvo
+    #dataroot_GT: /data1/yhliu/DATA/DAVIS_videvo_resized/
+    #cache_keys: ./lists/DAVIS_videvo_train.pkl
+    
+    # DAVIS_videvo_300
+    dataroot_GT: /data2/yhliu/DATA/DAVIS_videvo_resized300/
+    cache_keys: ./lists/DAVIS_videvo_train.pkl
+    
+    # GOT10k
+    #dataroot_GT: /data1/yhliu/DATA/GOT10k_resized
+    #cache_keys: ./lists/GOT10k_train.pkl
+    
+    N_frames: 1
+    keyframe_interval: 10
+    use_shuffle: true
+    n_workers: 3  # per GPU
+    batch_size: 4
+    GT_size: 256
+    use_flip: true
+    use_rot: true
+    color: LAB
+  
+
+#### network structures
+network_G:
+  which_model_G: TCVC_IDC  
+  nf: 64
+  N_RBs: 3
+  key_net: sig17
+  dataset: videvo
+  train_flow_keyNet: false
+  channel_reduction: only_1x1   # only_1x1
+
+#### path
+path:
+  pretrain_model_G: ~
+  strict_load: true
+  resume_state: ~
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 5e-5
+  lr_scheme: MultiStepLR #CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 100000
+  warmup_iter: -1  # -1: no warm up
+  lr_steps: [10000, 20000, 30000]
+  lr_gamma: 0.5
+  
+  #restarts: [150000, 300000, 450000]
+  #restart_weights: [1, 1, 1]
+  eta_min: !!float 1e-7
+
+  pixel_criterion: SmoothL1Loss
+  pixel_weight: 0 #1.0
+  val_freq: !!float 2e3
+
+  manual_seed: 0
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 2e3

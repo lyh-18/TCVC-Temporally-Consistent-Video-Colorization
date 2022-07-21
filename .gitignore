@@ -1,0 +1,5 @@
+results/
+experiments/pretrained_models/*
+experiments/TCVC_IDC/*
+!experiments/pretrained_models/*.txt
+tb_logger
