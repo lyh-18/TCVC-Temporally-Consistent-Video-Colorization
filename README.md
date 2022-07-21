@@ -87,7 +87,7 @@ Note: the code will first convert the ground-truth colorful video into gray vide
 ```
 python test_TCVC_onesampling_noGT.py  
 ```
-
+Note: In this mode, you can test the model with your own grayscale video. The grayscale video can be three channel or only one channel.
 Test settings like `GPU`, `input folder`, `model path`, `interval length`, etc, can be specified in the above test scripts.
 
 ## Training
