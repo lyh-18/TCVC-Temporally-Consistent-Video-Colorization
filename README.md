@@ -60,14 +60,15 @@ We mix the training sets of DAVIS and Videvo datasets together for training.
 [[Baidu Disk]]() (token: ) # to be updated
 
 #### Test dataset
-We use the test sets of DAVIS and Videvo datasets for quantitative evaluation.
-[[Baidu Disk]]() (token: ) # to be updated
+We use the test sets of DAVIS and Videvo datasets for quantitative evaluation.  
+DAVIS [[Baidu Disk]](https://pan.baidu.com/s/1vDnqHgRyj23knX6HDw-uEw) (token: tpsx) 
+Videvo DAVIS [[Baidu Disk]]() (token: ) # to be updated  
 
 #### Custom test dataset
 You can test your own dataset as well. More details are described in the Quick Test section.
 
 ### Pretrained Models
-1. Download the pretrained FlowNet2 model at [[Baidu Disk]](https://pan.baidu.com/s/188C2UPRvMXnuhxCaocBo0A) (token: 7sxc). Put the downloaded model in the `experiments/pretrained_models/` folder.  
+1. Download the pretrained FlowNet2 model and image-based colorization backbone model at [[Baidu Disk]](https://pan.baidu.com/s/188C2UPRvMXnuhxCaocBo0A) (token: 7sxc). Put the downloaded models in the `experiments/pretrained_models/` folder.  
 2. Download the pretrained TCVC model at [[Baidu Disk]](https://pan.baidu.com/s/1eSCUCfXjsDeLC5-qGytuiA) (token: z8f4). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)  
 
 ## Quick Test
@@ -99,7 +100,7 @@ python train_TCVC.py -opt options/train/train_TCVC_IDC.yml
 
 ## Miscellaneous
 1. We also provide a script `eval_results.py` to help evaluate the results.  
-2. To facilitate comparison, we also provide the output results of several methods and our method. Download link: [[Baidu Disk]]() (token: )  
+2. To facilitate comparison, we also provide the output results of several methods and our method. Download link: [[Baidu Disk]]() (token: )  # to be updated  
 
 ## Citation
 If you find our work is useful, please kindly cite it.
