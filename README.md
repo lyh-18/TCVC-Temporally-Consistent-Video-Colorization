@@ -57,7 +57,8 @@ python setup.py develop
 ### Dataset
 #### Training dataset
 We mix the training sets of DAVIS and Videvo datasets together for training.
-[[Baidu Disk]]() (token: ) # to be updated
+[[Baidu Disk]](https://pan.baidu.com/s/1n3jECI5tvp8Hj2UvJU1yvw) (token: scc7)  
+Note: All the frames are resized to 300x300 resolution.
 
 #### Test dataset
 We use the test sets of DAVIS and Videvo datasets for quantitative evaluation.  
