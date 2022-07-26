@@ -85,8 +85,8 @@ class VideoColorizationModel(BaseModel):
             )
             self.optimizers.append(self.optimizer_G)
             
-            print(trainable_param_count)
-            exit()
+            #print(trainable_param_count)
+            #exit()
 
             # schedulers
             if train_opt["lr_scheme"] == "MultiStepLR":
