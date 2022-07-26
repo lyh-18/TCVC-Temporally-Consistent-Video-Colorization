@@ -64,7 +64,6 @@ class VideoColorizationModel(BaseModel):
                 self.l_fs_w = train_opt["fs_weight"]
 
             # optimizers
-            trainable_param_count = 0
             wd_G = train_opt["weight_decay_G"] if train_opt["weight_decay_G"] else 0
             optim_params = []
             for (
@@ -73,7 +72,7 @@ class VideoColorizationModel(BaseModel):
             ) in self.netG.named_parameters():  # can optimize for a part of the model
                 if v.requires_grad:
                     optim_params.append(v)
-                    trainable_param_count += 1
+                    
                 else:
                     if self.rank <= 0:
                         logger.warning("Params [{:s}] will not optimize.".format(k))
@@ -85,8 +84,9 @@ class VideoColorizationModel(BaseModel):
             )
             self.optimizers.append(self.optimizer_G)
             
-            #print(trainable_param_count)
-            #exit()
+            #trainable_num = sum(p.numel() for p in self.netG.parameters() if p.requires_grad) 
+            #print(trainable_num)
+            
 
             # schedulers
             if train_opt["lr_scheme"] == "MultiStepLR":
