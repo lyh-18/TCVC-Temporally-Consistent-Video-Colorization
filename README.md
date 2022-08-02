@@ -69,7 +69,7 @@ Videvo [[Baidu Disk]](https://pan.baidu.com/s/1C0KL9Ld1rbJt5bi7RA1AkQ) (token: h
 You can test your own dataset as well. More details are described in the Quick Test section.
 
 ### Pretrained Models
-1. Download the pretrained FlowNet2 model and image-based colorization backbone model at [[Baidu Disk]](https://pan.baidu.com/s/188C2UPRvMXnuhxCaocBo0A) (token: 7sxc). Put the downloaded models in the `experiments/pretrained_models/` folder.  
+1. Download the pretrained FlowNet2 model and image-based colorization backbone model at [[Baidu Disk]](https://pan.baidu.com/s/1hIOAO7iiz2J06K2ts7f1Xw) (token: dgiy). Put the downloaded models in the `experiments/pretrained_models/` folder.  
 2. Download the pretrained TCVC model at [[Baidu Disk]](https://pan.baidu.com/s/1eSCUCfXjsDeLC5-qGytuiA) (token: z8f4). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)  
 
 ## Quick Test
