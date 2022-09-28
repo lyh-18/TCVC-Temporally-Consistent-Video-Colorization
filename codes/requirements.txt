@@ -13,3 +13,5 @@ tensorboardX==2.5.1
 torch==1.12.1
 torchvision==0.13.1
 tensorflow-gpu
+cudatoolkit==10.2
+cudnn==7.6.5
