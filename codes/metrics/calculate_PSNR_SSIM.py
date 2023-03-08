@@ -105,7 +105,7 @@ def calculate_ssim(img1, img2):
     '''
     if not img1.shape == img2.shape:
         raise ValueError('Input images must have the same dimensions.')
-      if img1.ndim == 2:
+    if img1.ndim == 2:
         return ssim(img1, img2)
     elif img1.ndim == 3:
         if img1.shape[2] == 3:

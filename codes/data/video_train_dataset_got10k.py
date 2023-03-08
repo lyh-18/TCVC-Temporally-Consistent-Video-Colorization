@@ -204,7 +204,7 @@ class VideoTrainDataset(data.Dataset):
                 GT_size_tuple = (3, 480, 852)
             elif self.opt['name'] == 'GOT10k':
                 GT_size_tuple = (3, 360, 640)
-            
+
             img_GT_l = []
             for v in neighbor_list:
                 if self.data_type == "mc":
@@ -223,7 +223,7 @@ class VideoTrainDataset(data.Dataset):
                         img_GT_path = osp.join(self.GT_root, name1+'_'+name2+'_'+name_a, "{:08d}.png".format(v))
                     else:
                         img_GT_path = osp.join(self.GT_root, name_a, "{:05d}.png".format(v))
-                    
+
 #                     print(img_GT_path)
                     img_GT = util.read_img(None, img_GT_path)
                 img_GT_l.append(img_GT)
