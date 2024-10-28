@@ -81,9 +81,9 @@ Note: All the frames are resized to 300x300 resolution.
 
 We use the test sets of DAVIS and Videvo datasets for quantitative evaluation.
 
-DAVIS [[Baidu Disk]](https://pan.baidu.com/s/1vDnqHgRyj23knX6HDw-uEw) (token: tpsx) [[Google Drive]](https://drive.google.com/file/d/1EgKG4fwt0Kn9wUhpEgxzqjZXusEOy7mI/view?usp=sharing)
+DAVIS [[Baidu Disk]](https://pan.baidu.com/s/1vDnqHgRyj23knX6HDw-uEw) (token: tpsx) or [[Google Drive]](https://drive.google.com/file/d/1EgKG4fwt0Kn9wUhpEgxzqjZXusEOy7mI/view?usp=sharing)
 
-Videvo [[Baidu Disk]](https://pan.baidu.com/s/1C0KL9Ld1rbJt5bi7RA1AkQ) (token: h4uy) [[Google Drive]](https://drive.google.com/file/d/1_TUYVaEJcBivnvFQXdE7SViWl31s1aUR/view?usp=sharing)
+Videvo [[Baidu Disk]](https://pan.baidu.com/s/1C0KL9Ld1rbJt5bi7RA1AkQ) (token: h4uy) or [[Google Drive]](https://drive.google.com/file/d/1_TUYVaEJcBivnvFQXdE7SViWl31s1aUR/view?usp=sharing)
 
 #### Custom test dataset
 
@@ -92,7 +92,7 @@ You can test your own dataset as well. More details are described in the Quick T
 ### Pretrained Models
 
 1. Download the pretrained FlowNet2 model and image-based colorization backbone model at [[Baidu Disk]](https://pan.baidu.com/s/1hIOAO7iiz2J06K2ts7f1Xw) (token: dgiy) or [[Google Drive]](https://drive.google.com/file/d/1Quz_M2sSgnPDXwY68wWj3QYe6jVGLLsZ/view?usp=sharing). Put the downloaded models in the `experiments/pretrained_models/` folder.
-2. Download the pretrained TCVC model at [[Baidu Disk]](https://pan.baidu.com/s/1eSCUCfXjsDeLC5-qGytuiA) (token: z8f4). or [[Google Drive]](https://drive.google.com/file/d/1nEim131CASkjgnc6MpE3FAkhZa5tFuMF/view?usp=sharing). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)
+2. Download the pretrained TCVC model at [[Baidu Disk]](https://pan.baidu.com/s/1eSCUCfXjsDeLC5-qGytuiA) (token: z8f4) or [[Google Drive]](https://drive.google.com/file/d/1nEim131CASkjgnc6MpE3FAkhZa5tFuMF/view?usp=sharing). Put the downloaded model in the `experiments/` folder. (Now we only support TCVC model with IDC backbone)
 
 
 
